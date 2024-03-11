@@ -1,4 +1,7 @@
 # This section covers the creation of EC2 Instance 
+provider "aws" {
+  region     = "us-east-1"
+}
 resource "aws_instance" "example" {
     ami="${var.ami_instance}"
   instance_type = "${var.instance_type}"
